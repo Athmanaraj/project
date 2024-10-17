@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <style>
+    div {
+        border: 1px solid black;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+        background-color: white;
+    }
+    .center{
+        text-align:center;
+        color: rgb(29, 80, 5);
+            }
+    .button{
+        background-color:rgb(42, 46, 17);
+        border: none;
+        color: white;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+       }
+    
+    </style>
+</head>
+<body>
+    <form align="center" action="signin.html">
+    <div class="container">
+    <h1 class="center">SIGN UP</h1>
+    <label>Email : </label><br>
+    <input type="email" class="form-control" required>
+    <br><br>
+    <label>Password : </label><br>
+    <input type="password" class="form-control"pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+     <br><br>
+     <label>Confirm Password : </label><br>
+     <input type="password" class="form-control"pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <br><br>
+    <button href="signin.html" class="button">Sign up</button><br><br>
+    </div>
+    </form>
+</body>
+</html>

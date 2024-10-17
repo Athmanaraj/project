@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:
+            url('pexels-felixmittermeier-1146134.jpg');
+            background-size: cover;
+            background-repeat: no repeat;
+            background-position:center
+            center;
+        }
+        p {
+            margin-top: 300px;
+        }
+        .container {
+            /* border: 2px solid black; */
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 300px;
+            margin-left: 300px;
+        }
+        .button{
+        background-color:rgb(3, 7, 59);
+        border: none;
+        color: white;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+       }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="Sign-In" align="center" action="reg.html">
+        <div class="container">
+            <h1 style="color:rgb(252, 252, 252);">Sign-In</h1>
+            <label style="color: azure;">E-mail : <br></label>
+            <input type="email" class="form-control" required><br><br>
+            <label style="color: azure;">Password : <br></label>
+            <input type="password" id="password" required><br><br>
+            <span id="error-message" class="error-message"></span><br><br>
+            <button type="submit" class="button">Sign-In</button><br><br>
+            <label style="color: azure;">Don't you have an account?</label>
+            <a href="sighnup.html" style="color: rgb(238, 235, 230);">Sign-Up</a><br><br><br>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('Sign-In').addEventListener('submit', function(event) {
+            console.log('Form submit event triggered');
+            var password = document.getElementById('password').value;
+            console.log('Password:', password);
+
+            // Updated regex pattern
+            var passwordPattern = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/;
+
+            var errorMessage = document.getElementById('error-message');
+
+            if (!passwordPattern.test(password)) {
+                console.log('Password does not match the pattern');
+                errorMessage.textContent = 'Password must contain at least one number, one uppercase and lowercase letter, one special character, and at least 8 or more characters.';
+                event.preventDefault();
+            } else {
+                console.log('Password is valid');
+                errorMessage.textContent = ''; // Clear the error message if the password is valid
+            }
+        });
+    </script>
+</body>
+</html>

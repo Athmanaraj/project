@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+        border: 1px solid black;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+        background-color: white;
+}
+      .center{
+         text-align: center;
+         color: rgba(80, 15, 4, 0.779);
+             }
+       .button{
+        background-color:rgb(42, 46, 17);
+        border: none;
+        color: white;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+       }
+       .button2 {background-color: black;}
+    </style>
+</head>
+<body>
+
+        <form align="center" action="reg1.html">
+        <div class="container">
+        <h1 class="center">CLASS REGISTRATION</h1>
+        <h5 align="center">Fill out The Form Carefully For Registration</h5><br>
+            <label>First name:</label><br>
+            <input type="text" class="form-control" required>
+            <br><br>
+            <label>Middle name:</label><br>
+            <input type="text" class="form-control" required>
+            <br><br>
+            <label>last name:</label><br>
+            <input type="text" class="form-control" required>
+        
+            <br><br>
+            <label>Address:</label><br>
+            <textarea></textarea>
+            <br><br>
+            <label> Student Email:</label><br>
+            <input type="email" class="form-control" required>
+            <br><br>
+            <label>Phone:</label><br>
+            <input type="number" class="form-control" required>
+            <br><br>
+            <label>Gender:</label>
+            <select>
+                <option value="select">Select</option>
+                <option value="select">Male</option>
+                <option value="select">Female</option>
+                <option value="select">others</option>
+                
+            </select>
+            <br><br>
+            <label>Course:</label>
+            <select>
+                <option value="select">Select</option>
+                <option value="select">Bsc Computer Science</option>
+                <option value="select">BBA</option>
+                <option value="select">BA English</option>
+            </select>
+            <br><br>
+            <button href="reg1.html" class="button">SUBMIT</button>
+            <script type="text/javascript">
+                function refreshPage() {
+                    if (confirm("Are you sure, want to refresh?")) {
+                        location.reload();
+                    }
+                }
+            </script>
+        </head>
+    
+    <input type="button" value="RESET" onclick="refreshPage()" /></p>
+      </form>
+</body>
+</html>
